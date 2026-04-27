@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy - Fabric Data Catalog</title>
+    <meta
+      name="description"
+      content="Privacy policy for the Fabric Data Catalog browser extension."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f9fc;
+        --panel: #ffffff;
+        --text: #172033;
+        --muted: #5d6b82;
+        --border: #d9e1ec;
+        --accent: #2563eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 20px;
+      }
+
+      article {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 32px;
+      }
+
+      h1,
+      h2 {
+        line-height: 1.25;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+      }
+
+      h2 {
+        margin: 32px 0 12px;
+        font-size: 20px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul {
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      code {
+        background: #eef3fb;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 1px 5px;
+        font-family: Consolas, Monaco, monospace;
+        font-size: 0.95em;
+      }
+
+      .updated {
+        color: var(--muted);
+        margin-bottom: 28px;
+      }
+
+      .top-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .top-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        main {
+          padding: 24px 12px;
+        }
+
+        article {
+          padding: 24px 18px;
+        }
+
+        h1 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <a class="top-link" href="support.html">Support</a>
+        <h1>Privacy Policy - Fabric Data Catalog</h1>
+        <p class="updated">Last updated: 2026-04-27</p>
+
+        <h2>Overview</h2>
+        <p>
+          Fabric Data Catalog is a browser extension for Google Chrome and
+          compatible Chromium browsers that helps users catalog, inspect, and
+          govern Microsoft Fabric Lakehouse and Delta/OneLake metadata.
+        </p>
+
+        <h2>Data Processed</h2>
+        <p>The extension may process the following data in the user's browser session:</p>
+        <ul>
+          <li>Fabric workspace, lakehouse, table, schema, and metadata information.</li>
+          <li>Delta/OneLake table history, file metadata, table properties, and quality-check results.</li>
+          <li>Query inputs and results needed for extension features.</li>
+          <li>User configuration, local preferences, cache, and extension state.</li>
+          <li>Microsoft authentication state required to access Fabric resources the user is already allowed to access.</li>
+          <li>Optional AI enrichment input, such as selected schema and governance context, when the user configures an OpenAI API key and manually triggers an AI feature.</li>
+        </ul>
+
+        <h2>Data Collection</h2>
+        <p>
+          Fabric Data Catalog does not use a publisher-owned backend service to
+          collect extension data.
+        </p>
+        <p>
+          The extension does not sell personal data and does not use data for
+          advertising.
+        </p>
+        <p>
+          The extension uses user data only to provide or improve its single
+          purpose: helping the user inspect, document, and govern Microsoft
+          Fabric Lakehouse and Delta/OneLake metadata. The use of user data
+          adheres to the Chrome Web Store User Data Policy, including the
+          Limited Use requirements.
+        </p>
+        <p>
+          If optional AI enrichment is configured and triggered by the user,
+          selected metadata may be sent directly from the browser to the OpenAI
+          API. This is not enabled by a publisher-owned backend and requires a
+          user-configured API key.
+        </p>
+
+        <h2>Data Storage</h2>
+        <p>Data may be stored locally in the browser using:</p>
+        <ul>
+          <li><code>chrome.storage</code></li>
+          <li>IndexedDB</li>
+          <li>in-memory browser state during the active session</li>
+        </ul>
+        <p>
+          Local cached data remains on the user's device unless the user exports
+          it, clears browser/extension data, or the extension removes expired
+          cache entries.
+        </p>
+
+        <h2>Network Requests</h2>
+        <p>
+          The extension communicates directly with Microsoft endpoints required
+          for its features, including Microsoft Fabric, Power BI, OneLake DFS,
+          OneLake Table API, Microsoft authentication, and related Microsoft
+          analysis endpoints declared in <code>manifest.json</code>.
+        </p>
+        <p>
+          The extension may communicate with
+          <code>https://onelake.table.fabric.microsoft.com/*</code> to read
+          Microsoft OneLake Table API / Delta table metadata required for
+          user-requested schema inspection, table metadata, and quality
+          workflows. This endpoint is used as a Microsoft data API and is not
+          used to load or execute remote code.
+        </p>
+        <p>
+          The extension may communicate with <code>https://api.openai.com/*</code>
+          only for optional user-triggered AI enrichment when an OpenAI API key
+          is configured.
+        </p>
+
+        <h2>Permissions Usage</h2>
+        <ul>
+          <li><code>activeTab</code> and <code>tabs</code>: detect the active Fabric or Power BI context.</li>
+          <li><code>storage</code>: save local settings, cache, and user preferences.</li>
+          <li><code>scripting</code>: support page integration needed to detect workspace and table context.</li>
+          <li><code>sidePanel</code>: display the extension user interface.</li>
+          <li><code>identity</code>: support Microsoft authentication flows when required.</li>
+          <li><code>alarms</code>: support scheduled quality-check workflows.</li>
+          <li>Microsoft host permissions: support Microsoft Fabric, Power BI, OneLake DFS, OneLake Table API, Microsoft authentication, and related Microsoft analysis endpoints.</li>
+          <li>OpenAI host permission: support optional user-triggered AI enrichment.</li>
+        </ul>
+
+        <h2>Data Retention</h2>
+        <p>Local cached metadata and settings are retained until:</p>
+        <ul>
+          <li>the user clears extension or browser data;</li>
+          <li>the extension cache expires or is removed by extension logic;</li>
+          <li>the extension is uninstalled.</li>
+        </ul>
+
+        <h2>Security</h2>
+        <p>
+          Data is processed in the browser context and sent only over HTTPS to
+          the Microsoft endpoints required for the selected functionality. Access
+          to Fabric data depends on the signed-in user's Microsoft permissions.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Use the support contact or support URL provided on the Chrome Web Store
+          listing for Fabric Data Catalog.
+        </p>
+
+        <h2>Compliance Note</h2>
+        <p>
+          Before production publishing, host this policy at a public HTTPS URL
+          and confirm it with the publisher's legal or compliance owner. The
+          public policy must match the Chrome Web Store listing and the
+          <code>Privacy practices</code> declarations.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

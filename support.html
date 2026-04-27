@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Support - Fabric Data Catalog</title>
+    <meta
+      name="description"
+      content="Support information for the Fabric Data Catalog browser extension."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f9fc;
+        --panel: #ffffff;
+        --text: #172033;
+        --muted: #5d6b82;
+        --border: #d9e1ec;
+        --accent: #2563eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 20px;
+      }
+
+      article {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 32px;
+      }
+
+      h1,
+      h2 {
+        line-height: 1.25;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+      }
+
+      h2 {
+        margin: 32px 0 12px;
+        font-size: 20px;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ol,
+      ul {
+        margin: 0 0 16px;
+        padding-left: 22px;
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      code {
+        background: #eef3fb;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 1px 5px;
+        font-family: Consolas, Monaco, monospace;
+        font-size: 0.95em;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        margin-bottom: 28px;
+      }
+
+      .top-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .top-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        main {
+          padding: 24px 12px;
+        }
+
+        article {
+          padding: 24px 18px;
+        }
+
+        h1 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <a class="top-link" href="privacy-policy.html">Privacy Policy</a>
+        <h1>Support - Fabric Data Catalog</h1>
+        <p class="subtitle">
+          Support information for the Fabric Data Catalog browser extension.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Use the support email or support URL configured in the Chrome Web Store
+          listing for Fabric Data Catalog.
+        </p>
+        <p>Recommended response target: 2 business days.</p>
+
+        <h2>How to Report an Issue</h2>
+        <p>Please include:</p>
+        <ol>
+          <li>Extension version.</li>
+          <li>Google Chrome or Chromium browser version.</li>
+          <li>Microsoft Fabric or Power BI page URL pattern where the issue occurs.</li>
+          <li>Reproduction steps.</li>
+          <li>Expected behavior and actual behavior.</li>
+          <li>Screenshot or console error logs, if available.</li>
+        </ol>
+        <p>
+          Do not include secrets, access tokens, passwords, or sensitive business
+          data in support reports.
+        </p>
+
+        <h2>Common Troubleshooting</h2>
+        <ol>
+          <li>Ensure you are on <code>https://app.fabric.microsoft.com</code> or a supported Power BI/Fabric page.</li>
+          <li>Confirm that the signed-in Microsoft account has access to the target workspace, lakehouse, and table.</li>
+          <li>Refresh the Fabric tab.</li>
+          <li>Re-authenticate if the Microsoft session expired.</li>
+          <li>Restart the browser if the side panel does not open.</li>
+          <li>For local testing only, reload the unpacked extension in <code>chrome://extensions</code>.</li>
+          <li>For Store installs, verify that the installed version matches the latest published version.</li>
+        </ol>
+
+        <h2>Enterprise / Private Rollout</h2>
+        <p>For controlled rollout, use:</p>
+        <ul>
+          <li>Chrome Web Store visibility: <strong>Unlisted</strong> for link-only installation.</li>
+          <li>Chrome Web Store visibility: <strong>Private</strong> for trusted testers, groups, or domain-limited installs.</li>
+          <li>Enterprise deployment through Chrome Enterprise policies, Google Admin console, Intune, or GPO for managed environments.</li>
+        </ul>
+      </article>
+    </main>
+  </body>
+</html>
